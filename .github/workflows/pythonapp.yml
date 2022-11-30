@@ -1,7 +1,7 @@
 name: composite Actions Example
 on:
   push:
-    branches: [ master ]
+    branches: [ master, main ]
   workflow_call:
 jobs:
   node-js-workflow:
