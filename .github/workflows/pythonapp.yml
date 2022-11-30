@@ -9,4 +9,4 @@ jobs:
     name: composite actions
     steps:
       - name: Install packages, test and code coverage
-        uses: vignesh1424/python-Github-actions-workflow@main
+        uses: vignesh1424/python-ci-workflow@main
