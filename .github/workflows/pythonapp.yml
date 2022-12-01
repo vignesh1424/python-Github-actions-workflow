@@ -8,5 +8,5 @@ jobs:
     runs-on: ubuntu-latest
     name: composite actions
     steps:
-      - name: Install packages, test and code coverage
+      - name: Install packages, build, test
         uses: vignesh1424/python-ci-workflow@main
