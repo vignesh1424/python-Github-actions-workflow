@@ -15,7 +15,7 @@ on:
       parameters:
         required: false
         type: string
-      tags:
+      tags: 
         required: false
         type: string
       testDir:
