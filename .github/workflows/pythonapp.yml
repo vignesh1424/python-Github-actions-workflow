@@ -12,6 +12,6 @@ jobs:
       - name: Install packages, build, test
         uses: vignesh1424/python-ci-workflow@main
         with:
-          srcDir: "/src/APIs/"
+          srcDir: "src/APIs/"
           testDir: "./test"
           version: "3.9"
