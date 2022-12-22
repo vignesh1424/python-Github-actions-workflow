@@ -10,7 +10,7 @@ jobs:
     name: composite actions
     steps:
       - name: Install packages, build, test
-        uses: vignesh1424/python-ci-workflow@main
+        uses: vignesh1424/python-Github-actions-workflow/.github/workflows/reusable-workflow.yml@main
         with:
           srcDir: "./src/APIs/"
           testDir: "./test"
