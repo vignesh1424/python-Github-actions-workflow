@@ -13,6 +13,6 @@ jobs:
         uses: vignesh1424/python-ci-workflow@main
         with:
           srcDir: "src/APIs/"
-          testDir: "./tests"
+          testDir: "tests"
           version: "3.9"
           codeCoverage: "true"
