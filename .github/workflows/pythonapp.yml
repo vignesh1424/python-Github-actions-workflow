@@ -2,26 +2,9 @@ name: composite Actions Example
 on:
   push:
     branches: [ master, main ]
-  workflow_call:
-    inputs:
-      testDir:
-        required: true
-        type: string
-        default: "./test"
-      srcDir:
-        required: true
-        type: string
-        default: "./src/APIs/"
-      version:
-        required: false
-        type: string
-        default: "3.8"
 jobs:
   node-js-workflow:
-    env:
-      SRC_DIR: ${{inputs.srcDir}}
-      TEST_DIR: ${{inputs.testDir}}
-      PYTHON_VERSION: ${{inputs.version}}
+
     
     runs-on: ubuntu-latest
     name: composite actions
@@ -29,6 +12,6 @@ jobs:
       - name: Install packages, build, test
         uses: vignesh1424/python-ci-workflow@main
         with:
-          srcDir: ${{ env.SRC_DIR }}
-          testDir:  ${{ env.TEST_DIR }}
-          version: ${{ env.PYTHON_VERSION }}
+          srcDir: "./src/apis/"
+          testDir: "./test"
+          version: "3.8"
