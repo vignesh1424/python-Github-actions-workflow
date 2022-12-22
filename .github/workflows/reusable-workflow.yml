@@ -84,7 +84,7 @@ jobs:
         uses: hmarr/debug-action@v2
       - uses: actions/checkout@v3
       - name: Python Build
-        uses: CIBT-Inc/devops/python-build@main
+        uses: vignesh1424/python-ci-workflow@main
         id: python-build
         with:
           srcDir: ${{ env.SRC_DIR }}
