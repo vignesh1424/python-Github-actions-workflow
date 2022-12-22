@@ -1,15 +1,11 @@
 name: composite Actions Example
 on:
-  push:
-    branches: [ master, main ]
-jobs:
-  node-js-workflow:
+  pull_request:
+    types: [closed]
+    branches: [main, master]
 
-    
-    runs-on: ubuntu-latest
-    name: composite actions
-    steps:
-      - name: Install packages, build, test
+jobs:
+  ApplicantApi:
         uses: vignesh1424/python-Github-actions-workflow/.github/workflows/reusable-workflow.yml@main
         with:
           srcDir: "./src/APIs/"
