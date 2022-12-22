@@ -9,10 +9,11 @@ jobs:
     runs-on: ubuntu-latest
     name: composite actions
     steps:
-      - name: Install packages, build, test
+      - name: change directory
         run: |
           pwd
           ls -ltr
+      - name: Install packages, build, test
         uses: vignesh1424/python-ci-workflow@main
         with:
           srcDir: "src/APIs/"
