@@ -16,7 +16,10 @@ jobs:
         uses: vignesh1424/python-ci-workflow@main
         with:
           srcDir: "./src/APIs/"
+          testDir: "./tests"
           version: "3.9"
+          codeCoverage: "true"
+          unitTest: "false"
       - name: Deploy in EC2
         run: |
           echo ${{ matrix.region }}
