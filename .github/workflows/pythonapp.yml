@@ -8,9 +8,6 @@ jobs:
     
     runs-on: ubuntu-latest
     name: composite actions
-    strategy:
-      matrix:
-        region: ['us-east-1', 'eu-central-1']
     steps:
       - name: Install packages, build, test
         uses: vignesh1424/python-ci-workflow@main
@@ -20,7 +17,4 @@ jobs:
           version: "3.9"
           codeCoverage: "true"
           unitTest: "false"
-      - name: Deploy in EC2
-        run: |
-          echo ${{ matrix.region }}
         
